@@ -9,8 +9,172 @@
     규칙 cts_페이지명 감싸서 절대 다른 페이지와 이름이 겹치지 않도록 
 */
 
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+    color: var(--color-main1);
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Eul';
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 40px;
+    border-bottom: 1px solid (225, 225, 225, 0.2);
+}
+header h2 {
+    margin-top: 25px;
+}
 
+header .gnb .gnb_wrap ul{
+    display: flex;
+    margin-top: 25px;
+}
+header .gnb .gnb_wrap ul li {
+    width: 200px;
+    height: 100%;
+    margin-left: 200px;
+}
+.sub_contents .top_cnt {
+    padding-top:219px;
+}
 .sub_contents .cnt_darm {
     background-image: url(../images/sub/sub_darm_bg1.png);
-    height: 1000px;
+    height: 950px;
+}
+.sub_contents .cnt_darm .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.sub_contents .cnt_darm .left .top {
+    padding-bottom: 36px;
+}
+.sub_contents .cnt_darm .left h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--color-main1);
+    position: relative;
+    padding-left: 25px;
+}
+.sub_contents .cnt_darm .left h2::before {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 3px;
+    height: 124px;
+    background-color: var(--color-main1);
+    content: "";
+}
+.sub_contents .cnt_darm .wrapper::after {
+    position: absolute;
+    left: 0;
+    top: 53px;
+    width: 1356px;
+    content: "01. RENEUAL WEBSITE ";
+    font-size: 120px;
+    color: rgba(128, 28, 33, 0.03);
+    line-height: 1;
+    font-family: 'Eul';
+    font-weight: 700;
+}
+.sub_contents .cnt_darm .left p {
+    width: 415px;
+    font-size: 20px;
+}
+.sub_contents .cnt_darm .left .top p {
+    margin-left: 25px;
+}
+.sub_contents .cnt_darm .left strong {
+    font-family: 'Eul';
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--color-main1);
+    margin-top: 10px;
+    display: block;
+}
+.sub_contents .cnt_darm .left .color ul {
+    display: flex;
+}
+.sub_contents .cnt_darm .left .color ul li{
+    font-size: 0;
+    line-height: 0;
+    margin-right: 10px;
+}
+.sub_contents .cnt_darm .left .color .beige {
+    background-color: #C7A88B;
+    width: 37px;
+    height: 37px;
+}
+.sub_contents .cnt_darm .left .color .charcoal {
+    background-color: #3d3d3d;
+    width: 37px;
+    height: 37px;
+}
+.sub_contents .cnt_darm .left .go {
+    
+    background-color: #EFF0E3;
+    border: 1px solid var(--color-main1);
+    width: 207px;
+    height: 38px;
+    font-size: 25px;
+    font-family: 'Eul';
+    color: var(--color-main1);
+    text-align: center;
+    position: relative;
+    margin: 30px 0 0 8px;
+}
+.sub_contents .cnt_darm .left .go a {
+    display: block;
+    width: 100%;
+}
+.sub_contents .cnt_darm .left .go a::before {
+    position: absolute;
+    left: -9px;
+    top: -9px;
+    background-color: #EFF0E3;
+    border: 1px solid var(--color-main1);
+    width: 207px;
+    height: 38px;
+    content: "go to website";
+
+    font-size: 25px;
+    font-family: 'Eul';
+    color: var(--color-main1);
+    text-align: center;
+    transition: 0.5s;
+    display: block;
+}
+.sub_contents .cnt_darm .left .go a:hover:before {
+    left: -1px;
+    top: -1px;
+}
+.sub_contents .cnt_darm .right .photo {
+    font-size: 0;
+    line-height: 0;
+    width: 1041px;
+    height: 694px;
+    background-image: url(../images/sub/sub_darm_computer.png);
+   
+}
+.sub_contents .cnt_darm .right a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+
+    animation-name: 'com';
+    animation-delay: 0.5s;
+    animation-duration: inherit;
+}
+.ani { animation-name:'com'; animation-duration:3s } /* 애니메이션을 적용한 요소의 선택자에 animation을 적용함 */
+@keyframes move { /* 애니메이션을 효과를 미리 설정함 */
+	0% { transform:translate(0, 0) }  /* 애니메이션을 시작할때의 속성 */
+	50% { transform:translate(0, 100px) } /* 중간값은 %를 조절하여 추가/삭제 가능 */
+	100% { transform:translate(100px, 100px) } /* 애니메이션이 종료될때의 속성 */
 }

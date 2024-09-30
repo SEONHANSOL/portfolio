@@ -3,20 +3,23 @@
 @import url(common.css);
 @import url(layout.css);
 
-.fp_nav {
+#fp-nav {
     position: fixed;
     left: 1%;
     top: 50%;
     transform: translateY(-50%); /* 위아래 가운데*/
     z-index: 99;
 }
-.fp_nav ul li a {
+#fp-nav ul li a {
     display: block;
     font-size: 0;
     line-height: 0;
     position: relative;
+    width: 13px;
+    height: 13px;
+    margin: 12px 0;
 }
-.fp_nav ul li a::before {
+#fp-nav ul li a::before {
     position: absolute;
     left: 0;
     top: 0;
@@ -25,13 +28,15 @@
     border: 1px solid #E8CFA7;
     content: "";
 }
-.fp_nav ul li.active a,
-.fp_nav ul li a:hover {
-    /* background-color: #E8CFA7; */
+#fp-nav ul li a.active::before,
+#fp-nav ul li a:hover:before {
+    background-color: #E8CFA7;
 }
-.fp_nav ul li.active a::before,
-.fp_nav ul li a:hover:before {
-    /* background-color: #E8CFA7; */
+#fp-nav ul li a span {
+    display: none;
+}
+body #fp-nav .fp-tooltip {
+    display: none !important;
 }
 
 .who {
