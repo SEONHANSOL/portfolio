@@ -18,42 +18,6 @@ html, body {
     margin: 0 auto; /* 가운데정렬 */
 }
 
-@media screen and (max-width:1560px){
-    .wrapper{
-    width: auto;
-    margin: 0 61px; /* 좌우 퀵메뉴 만큼 여백 주기 */
-    }
-}
-
-@media screen and (max-width:1300px){
-    html, body {
-        font-size: 15px;
-    }
-    #wrap {
-        min-width: 100%;
-    }
-    
-}/* media */
-@media screen and (max-width:1024px){
-    html, body {
-        font-size: 15px;
-    }
-    .wrapper{
-        width: auto;
-        margin: 0 20px;
-    }
-}
-@media screen and (max-width:768px){
-    html, body {
-        font-size: 14px;
-    }
-}/* media */
-@media screen and (max-width:500px){
-    html, body {
-        font-size: 13px;
-    }
-}/* media */
-
 ::selection {
     background-color: #801C21;
     color: #E8CFA7;
